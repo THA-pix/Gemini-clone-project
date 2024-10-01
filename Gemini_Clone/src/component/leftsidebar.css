@@ -1,0 +1,510 @@
+/* Import the fonts at the top of the file */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap');
+
+/* General body styling */
+body {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 1rem; /* Use rem for font scaling */
+    background-color: #212020;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    
+    
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    scroll-behavior: none;
+    margin-top: 0px;
+}
+.head img{
+    font-size: 2.7rem;
+    margin-top: 4rem;
+    margin-right: 10rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+
+}
+
+/* Title styling */
+/* Default styles for larger screens */
+.title {
+    font-size: 2.7rem;
+    background-clip: text;
+    background: linear-gradient(to right, #4285f4, #d96570);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 4rem;
+    margin-left: 6rem;
+    width: fit-content;
+}
+
+/* Adjust second title */
+.title2 {
+    position: relative;
+    margin-left: 6rem;
+}
+
+/* Media query for smaller screens (mobile) */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5rem; /* Reduce font size for mobile */
+        margin-top: 3rem;  /* Adjust top margin */
+        margin-left: 1.5rem; /* Adjust left margin for mobile */
+    }
+
+    .title2 {
+        margin-left: 1.5rem; /* Adjust margin for the second title */
+    }
+    .head img{
+        display: none;
+    }
+}
+
+/* Media query for even smaller screens (very small mobile devices) */
+@media (max-width: 500px) {
+    .title {
+        font-size: 1.2rem; /* Further reduce font size */
+        margin-top: 1rem;
+        margin-left: 1rem; /* Smaller left margin */
+    }
+
+    .title2 {
+        margin-left: 1rem;
+    }
+    
+}
+/* Example media query for a 1280px wide screen */
+@media (max-width: 1280px) {
+    .title {
+        font-size: 1.8rem; /* Adjust the font size for this screen width */
+    }
+}
+
+/* Example media query for a 2712px wide screen */
+@media (max-width: 2712px) {
+    .title {
+        font-size: 2.5rem; /* Adjust the font size for this larger screen */
+    }
+}
+
+
+/* Unordered list styles */
+.unorderedlist {
+    
+    
+    
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    justify-content: center;
+   
+
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.unorderedlist::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in webkit browsers */
+}
+
+/* List item styles */
+.unorderedlist .list {
+    padding-top: 20px;
+    margin: 2px;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    background: rgb(60, 58, 58);
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+
+    background-color: #343131; /* Background color for each item */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Padding inside each item */
+    margin: 8px 0; /* Space between items */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center items */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .list {
+        padding: 20px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+    .unorderedlist{
+        height: 210px;
+        
+
+    }
+    .material-symbols-outlined{
+        display: none;
+    }
+    
+    .list h4 {
+        font-size: 16px; /* Font size for headers */
+        margin: 0; /* Remove default margin */
+    }
+}
+/* Base styles for unordered list */
+
+
+/* Styles for list items */
+
+
+/* Hover effect for list items */
+.list:hover {
+    background-color: #555; /* Change background on hover */
+}
+
+/* Title styles within the list item */
+.list h4 {
+    flex: 1; /* Allow title to take up available space */
+    margin: 0; /* Remove margin from title */
+    font-size: 1.2rem; /* Font size for the title */
+}
+
+/* Icon styles */
+.material-symbols-outlined {
+    font-size: 24px; /* Icon size */
+    margin-left: 8px; /* Space between text and icon */
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .material-symbols-outlined {
+        display: none; /* Hide icons */
+    }
+}
+
+@media (max-width: 480px) {
+    .list {
+        flex-direction: column; /* Stack text and icon vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .material-symbols-outlined {
+        margin-top: 8px; /* Space above the icon */
+    }
+}
+@media (max-width: 480px) {
+    .list {
+        flex-direction: column; /* Stack text and icon vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .material-symbols-outlined {
+        margin-top: 8px; /* Space above the icon */
+    }
+}
+
+
+.unorderedlist .list span {
+    margin-top: 1rem;
+    background-color: #343131;
+    border-radius: 50%;
+    padding: 0.5rem;
+    color: #fff;
+}
+.input-container {
+    position: relative;
+    width: 100%; /* Takes full width of its container */
+    max-width: 100vw; /* Ensures it doesn't exceed the viewport width */
+    padding: 0 1rem; /* Adds some padding for better spacing */
+    bottom: 0;
+}
+
+.main-bottom {
+    
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+
+    position: relative;
+
+    
+    padding: 0 1rem; 
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+
+    
+    bottom: 120px; /* Leave space for the notes, adjust as needed */
+
+   
+}
+.search-box img{
+    width: 24px;
+    cursor: pointer;
+}
+.search-box input{
+    flex: 1;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 8px;
+    font-size: 18px;
+}
+.search-box div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.bottom-info {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+            /* Full viewport height */
+    text-align: center;     /* Center text */
+}
+.main-bottom .search-box {
+    margin-top: 60px; /* Moves the box 40px down */
+    /* Other styling you might have */
+}
+/* Base styles for the header */
+.header {
+    padding: 16px;
+    text-align: center;
+}
+
+/* Title styling */
+.title2 {
+    font-size: 1.5rem; /* Adjust for responsiveness */
+    margin-bottom: 16px;
+}
+
+/* Unordered list styles */
+.unorderedlist {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+/* List item styles */
+.list {
+    background-color: #343131; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px;
+    margin: 8px 0; /* Space between list items */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+/* Hover effect */
+.list:hover {
+    background-color: #555; /* Change background on hover */
+}
+
+/* Heading styles within list */
+.list h4 {
+    flex: 1; /* Take up available space */
+    margin: 0; /* Remove margin */
+    font-size: 1.1rem; /* Adjust font size */
+}
+
+/* Material icon styles */
+.material-symbols-outlined {
+    font-size: 24px; /* Size of the icon */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .title2 {
+        font-size: 1.2rem; /* Smaller title for mobile */
+    }
+
+    .list {
+        padding: 12px; /* Smaller padding for mobile */
+    }
+
+    .list h4 {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+
+    
+    .unorderedlist{
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .title2 {
+        font-size: 1rem; /* Even smaller title for very small screens */
+    }
+
+    .list {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    
+}
+
+.main .bottom-info p{
+    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: transparent
+}
+input {
+    width: 70%; /* More flexible width for smaller screens */
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+button {
+    width: 5%; /* Set button width relative to input */
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.content{
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+.content::-webkit-scrollbar{
+    display: none;
+}
+.qdiv {
+    margin: 40px 0px; /* Vertical spacing between message blocks */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between image and text */
+    background-color: #343131; /* Dark background color */
+    padding: 15px; /* Add padding inside the div */
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+    max-width: 90%; /* Optional: limit max width */
+    width: fit-content; /* Adjust width based on content */
+    height: fit-content;
+}
+
+.result img{
+    width: 40px;
+    border-radius: 50px;
+}
+.result-data{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.loader hr{
+border-radius: 4px;
+border: none;
+background-color: #f6f7f8;
+background: linear-gradient(to right,#b1d5ee,#c953e98a,#9ed7ff);
+background-size: 800px 50px;
+height: 20px;
+animation: loader 4s infinite linear;
+}
+
+@keyframes loader{
+    0%{
+        background-position: -800px 0px;
+
+    }
+    100%{
+        background-position: 800px 0px;
+    }
+}
+
+.result-data p{
+    font-size: 17px;
+    font-weight: 300px;
+    line-height: 1.8;
+}
+.bottom-info span{
+    background: linear-gradient(to right, #4285f4, #d96570);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+    .main-bottom {
+        margin-top: 32px; /* Smaller top margin */
+        margin-bottom: 33px;
+        margin-top: 40px;
+        right: 9px;
+    }
+
+    .search-box {
+         /* Stack input and button vertically */
+         top: 20px;
+        width: 90%; /* Width for mobile */
+    }
+
+    .search-box input {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 8px; /* Space below the input */
+    }
+
+    .bottom-info {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+    .bottom-info p span{
+        padding-right: 12px;
+        
+    }
+}
+@media (max-width: 480px) {
+    .search-box input {
+        font-size: 44px; /* Smaller font size for input */
+    }
+
+    .search-box button {
+        padding: 8px 12px; /* Smaller padding for button */
+    }
+    .bottom-info p span{
+        padding-right: 12px;
+    }
+    .search-box button img{
+        position: relative;
+        padding-right:4px;
+        margin-left: -3px;
+        margin: 1px;
+        right: 13px;
+    }
+}
